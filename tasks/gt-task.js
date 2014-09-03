@@ -1,6 +1,7 @@
 var taskName = 'gt';
 var taskInfo = 'Runs GT/QUnit/Doh/jsUnity tests under node with code coverage';
 
+var path = require('path');
 var check = require('check-types');
 require('lazy-ass');
 var gt = require('gt');
@@ -25,7 +26,10 @@ module.exports = function(grunt) {
     var done = self.async();
     lazyAss(check.fn(done), 'could not get async done function');
 
-    options.files = allFiles;
+    options.files = allFiles.map(function (name) {
+      return path.resolve(name);
+    });
+    options.cover = path.resolve(options.cover);
     /*
     xplain.document({
       outputFolder: options.output,
