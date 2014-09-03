@@ -10,7 +10,8 @@ module.exports = function(grunt) {
 
   function runGt(self) {
     var options = self.options({
-      bdd: false
+      bdd: false,
+      cover: 'cover'
     });
 
     var allFiles = [];
@@ -24,6 +25,7 @@ module.exports = function(grunt) {
     var done = self.async();
     lazyAss(check.fn(done), 'could not get async done function');
 
+    options.files = allFiles;
     /*
     xplain.document({
       outputFolder: options.output,
@@ -33,7 +35,10 @@ module.exports = function(grunt) {
       grunt.verbose.writeln(JSON.stringify(results, null, 2));
       done(true);
     }).done(); */
-    gt.TestingWithCoverage.init(options);
+    console.log(options);
+    if (!gt.TestingWithCoverage.init(options)) {
+      grunt.log.fail('Could not init gt options');
+    }
     done(true);
   }
 
