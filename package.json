@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "check-types": "1.3.1",
-    "lazy-ass": "0.5.1",
-    "gt": "0.8.40"
+    "gt": "0.8.40",
+    "lazy-ass": "0.5.1"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "0.10.0",
@@ -36,7 +36,7 @@
     "test",
     "runner",
     "QUnit",
-    "code"
+    "code",
     "coverage",
     "istanbul"
   ],

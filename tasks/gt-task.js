@@ -1,16 +1,16 @@
-var taskName = 'xplain';
-var taskInfo = 'Generates API docs using xplain';
+var taskName = 'gt';
+var taskInfo = 'Runs GT/QUnit/Doh/jsUnity tests under node with code coverage';
 
 var check = require('check-types');
 require('lazy-ass');
-var xplain = require('xplain');
+var gt = require('gt');
+la(check.object(gt.TestingWithCoverage), 'invalid gt object', gt);
 
 module.exports = function(grunt) {
 
-  function runExplain(self) {
+  function runGt(self) {
     var options = self.options({
-      output: 'api',
-      framework: 'jasmine'
+      bdd: false
     });
 
     var allFiles = [];
@@ -24,6 +24,7 @@ module.exports = function(grunt) {
     var done = self.async();
     lazyAss(check.fn(done), 'could not get async done function');
 
+    /*
     xplain.document({
       outputFolder: options.output,
       patterns: allFiles,
@@ -31,10 +32,12 @@ module.exports = function(grunt) {
     }).then(function (results) {
       grunt.verbose.writeln(JSON.stringify(results, null, 2));
       done(true);
-    }).done();
+    }).done(); */
+    gt.TestingWithCoverage.init(options);
+    done(true);
   }
 
   grunt.registerMultiTask(taskName, taskInfo, function () {
-    return runExplain(this);
+    return runGt(this);
   });
 };

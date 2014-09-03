@@ -12,21 +12,12 @@ module.exports = function(grunt) {
       }
     },
 
-    xplain: {
-      options: {
-        framework: 'jasmine'
-      },
-      toHtml: {
+    gt: {
+      bdd: {
         options: {
-          output: 'api'
+          bdd: true
         },
-        src: ['test/*.js']
-      },
-      toMarkdown: {
-        options: {
-          output: 'test/api.md'
-        },
-        src: ['test/*.js']
+        src: ['test/spec.js']
       }
     },
 
@@ -44,5 +35,5 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
 
   grunt.registerTask('default',
-    ['deps-ok', 'jshint', 'jshint-solid', 'nice-package', 'xplain', 'readme']);
+    ['deps-ok', 'jshint', 'jshint-solid', 'nice-package', 'gt', 'readme']);
 };

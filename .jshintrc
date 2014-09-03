@@ -71,6 +71,7 @@
 
   "globals"       : {
     "gt": true,
-    "lazyAss": true
+    "lazyAss": true,
+    "la": true
   }
 }

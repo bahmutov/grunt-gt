@@ -1,86 +1,31 @@
-# grunt-xplain v0.2.4
+# grunt-gt v0.1.0
 
-> Generates API docs from unit tests using xplain
+> Grunt task for GT - node test runner for QUnit with code coverage
 
-[![NPM][grunt-xplain-icon] ][grunt-xplain-url]
+[![NPM][grunt-gt-icon] ][grunt-gt-url]
 
-[![Build status][grunt-xplain-ci-image] ][grunt-xplain-ci-url]
-[![dependencies][grunt-xplain-dependencies-image] ][grunt-xplain-dependencies-url]
-[![devdependencies][grunt-xplain-devdependencies-image] ][grunt-xplain-devdependencies-url]
+[![Build status][grunt-gt-ci-image] ][grunt-gt-ci-url]
+[![dependencies][grunt-gt-dependencies-image] ][grunt-gt-dependencies-url]
+[![devdependencies][grunt-gt-devdependencies-image] ][grunt-gt-devdependencies-url]
 
-[grunt-xplain-icon]: https://nodei.co/npm/grunt-xplain.png?downloads=true
-[grunt-xplain-url]: https://npmjs.org/package/grunt-xplain
-[grunt-xplain-ci-image]: https://travis-ci.org/bahmutov/grunt-xplain.png?branch=master
-[grunt-xplain-ci-url]: https://travis-ci.org/bahmutov/grunt-xplain
-[grunt-xplain-dependencies-image]: https://david-dm.org/bahmutov/grunt-xplain.png
-[grunt-xplain-dependencies-url]: https://david-dm.org/bahmutov/grunt-xplain
-[grunt-xplain-devdependencies-image]: https://david-dm.org/bahmutov/grunt-xplain/dev-status.png
-[grunt-xplain-devdependencies-url]: https://david-dm.org/bahmutov/grunt-xplain#info=devDependencies
+[grunt-gt-icon]: https://nodei.co/npm/grunt-gt.png?downloads=true
+[grunt-gt-url]: https://npmjs.org/package/grunt-gt
+[grunt-gt-ci-image]: https://travis-ci.org/bahmutov/grunt-gt.png?branch=master
+[grunt-gt-ci-url]: https://travis-ci.org/bahmutov/grunt-gt
+[grunt-gt-dependencies-image]: https://david-dm.org/bahmutov/grunt-gt.png
+[grunt-gt-dependencies-url]: https://david-dm.org/bahmutov/grunt-gt
+[grunt-gt-devdependencies-image]: https://david-dm.org/bahmutov/grunt-gt/dev-status.png
+[grunt-gt-devdependencies-url]: https://david-dm.org/bahmutov/grunt-gt#info=devDependencies
 
 
 
-Grunt wrapper for [xplain](https://github.com/bahmutov/xplain)
+Grunt wrapper for [gt](https://github.com/bahmutov/gt)
 
 ### Install
 
-`npm install grunt-xplain --save-dev`
+`npm install grunt-gt --save-dev`
 
-### Example
-
-Generate API doc into folder `api` from JavaScript source files
-in the `src` and `test` folders using Jasmine framework
-
-```js
-// Gruntfile.js
-grunt.initConfig({
-  xplain: {
-    options: {
-      output: 'api',
-      framework: 'jasmine'
-    },
-    src: ['src/*.js', 'test/*.js']
-  }
-});
-grunt.loadNpmTasks('grunt-xplain');
-grunt.registerTask('default', ['xplain']);
-```
-
-### Unit test to Markdown
-
-You can update existing code blocks in Markdown documents
-by finding unit tests with same names.
-
-    // test/add-spec.js
-    it('adds numbers', function () {
-      lazyAss(add(2, 3) === 5);
-      lazyAss(add(2, -3) === -1);
-    });
-    // test/api.md
-    some text, followed by ### <test name> line
-
-    ### adds numbers
-
-    // Gruntfile.js
-    xplain: {
-      options: {
-        framework: 'jasmine'
-      },
-      toMarkdown: {
-        options: {
-          output: 'test/api.md'
-        },
-        src: ['test/*-spec.js']
-      }
-    }
-
-The block `### adds number` will be updated to
-
-    ### adds numbers
-
-        add(2, 3); // 5
-        add(2, -3); // -1
-
-For examples, see [Gruntfile.js]
+Docs coming soon
 
 
 
@@ -97,7 +42,7 @@ License: MIT - do anything with the code, but don't blame me if it does not work
 Spread the word: tweet, star on github, etc.
 
 Support: if you find any problems with this module, email / tweet /
-[open issue](https://github.com/bahmutov/grunt-xplain/issues) on Github
+[open issue](https://github.com/bahmutov/grunt-gt/issues) on Github
 
 
 
