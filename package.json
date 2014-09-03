@@ -1,0 +1,56 @@
+{
+  "name": "grunt-gt",
+  "description": "Grunt task for GT - node test runner for QUnit with code coverage",
+  "version": "0.1.0",
+  "author": {
+    "name": "Gleb Bahmutov",
+    "email": "gleb.bahmutov@gmail.com",
+    "url": "http://glebbahmutov.com"
+  },
+  "bugs": {
+    "url": "https://github.com/bahmutov/grunt-gt/issues"
+  },
+  "dependencies": {
+    "check-types": "1.3.1",
+    "lazy-ass": "0.5.1",
+    "gt": "0.8.40"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "0.10.0",
+    "grunt-deps-ok": "0.3.0",
+    "grunt-jshint-solid": "0.1.0",
+    "grunt-nice-package": "0.9.1",
+    "grunt-readme": "0.4.5",
+    "jshint-stylish": "0.4.0",
+    "matchdep": "0.3.0",
+    "pre-git": "0.0.16"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "homepage": "https://github.com/bahmutov/grunt-gt",
+  "keywords": [
+    "gruntplugin",
+    "gt",
+    "unit",
+    "test",
+    "runner",
+    "QUnit",
+    "code"
+    "coverage",
+    "istanbul"
+  ],
+  "license": "MIT",
+  "main": "Gruntfile.js",
+  "peerDependencies": {
+    "grunt": "0.4.5"
+  },
+  "pre-commit": "grunt",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bahmutov/grunt-gt.git"
+  },
+  "scripts": {
+    "test": "grunt"
+  }
+}
