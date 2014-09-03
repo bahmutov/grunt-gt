@@ -30,20 +30,14 @@ module.exports = function(grunt) {
       return path.resolve(name);
     });
     options.cover = path.resolve(options.cover);
-    /*
-    xplain.document({
-      outputFolder: options.output,
-      patterns: allFiles,
-      framework: options.framework
-    }).then(function (results) {
-      grunt.verbose.writeln(JSON.stringify(results, null, 2));
-      done(true);
-    }).done(); */
-    console.log(options);
     if (!gt.TestingWithCoverage.init(options)) {
       grunt.log.fail('Could not init gt options');
     }
-    done(true);
+
+    gt.TestingWithCoverage.run(function finished(failedN) {
+      grunt.log.writeln('Finished testing,', failedN, 'test(s) failed');
+      done(failedN === 0);
+    });
   }
 
   grunt.registerMultiTask(taskName, taskInfo, function () {

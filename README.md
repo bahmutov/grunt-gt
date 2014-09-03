@@ -1,4 +1,4 @@
-# grunt-gt v0.1.0
+# grunt-gt v0.1.1
 
 > Grunt task for GT - node test runner for QUnit with code coverage
 
@@ -25,7 +25,26 @@ Grunt wrapper for [gt](https://github.com/bahmutov/gt)
 
 `npm install grunt-gt --save-dev`
 
-Docs coming soon
+## Use
+
+### Testing BDD
+
+```js
+grunt.initConfig({
+  gt: {
+    bdd: {
+      options: {
+        bdd: true,
+        cover: 'cover'
+      },
+      src: ['test/spec.js']
+    }
+  }
+});
+```
+
+`grunt gt` runs unit tests and outputs coverage into `cover` folder.
+
 
 
 
