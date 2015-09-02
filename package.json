@@ -1,7 +1,7 @@
 {
   "name": "grunt-gt",
   "description": "Grunt task for GT - node test runner for QUnit with code coverage",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": {
     "name": "Gleb Bahmutov",
     "email": "gleb.bahmutov@gmail.com",
@@ -11,9 +11,9 @@
     "url": "https://github.com/bahmutov/grunt-gt/issues"
   },
   "dependencies": {
-    "check-types": "1.4.0",
-    "gt": "0.8.47",
-    "lazy-ass": "0.5.3"
+    "check-more-types": "2.0.3",
+    "gt": "0.8.48",
+    "lazy-ass": "0.6.0"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "0.11.0",

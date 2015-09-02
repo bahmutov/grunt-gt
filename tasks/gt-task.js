@@ -2,7 +2,7 @@ var taskName = 'gt';
 var taskInfo = 'Runs GT/QUnit/Doh/jsUnity tests under node with code coverage';
 
 var path = require('path');
-var check = require('check-types');
+var check = require('check-more-types');
 require('lazy-ass');
 var gt = require('gt');
 la(check.object(gt.TestingWithCoverage), 'invalid gt object', gt);
