@@ -1,4 +1,4 @@
-# grunt-gt v0.1.5
+# grunt-gt v0.1.6
 
 > Grunt task for GT - node test runner for QUnit with code coverage
 
